@@ -4,5 +4,5 @@ with station_dimension_cte as(
     start_statio_id,
     start_lat,
     start_lng
-    from {{ source('Demo', 'bike') }})
+    from {{ ref('stage_bike') }})
 select * from station_dimension_cte
